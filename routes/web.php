@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/user','UserController@index');
+Route::post('/user','UserController@create');
+
+
+
+Route::get('/book','BookController@index');
+
+Route::get('/reserve','ReserveController@index');
+Route::post('/reserve','ReserveController@index');
+
+Route::get('user/add','UserController@add');
+Route::post('user/add','UserController@add');
